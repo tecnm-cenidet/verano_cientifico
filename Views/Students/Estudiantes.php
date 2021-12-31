@@ -12,7 +12,10 @@
 <div class="container border">
     <div class="row">
         <section id="imagen" class="col-md-12 mt-2">
-            <h1>Aqui va el contenido</h1>
+            <?php dep($_SESSION['userData']);
+            dep($_SESSION['permisos']);
+            dep($_SESSION['permisosModules']);
+            ?>
             <div class="my-5">&nbsp;</div>
         </section>
     </div>

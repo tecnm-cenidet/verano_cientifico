@@ -26,6 +26,38 @@ function dep($data)
     $format .= print_r('</pre>');
     return $format;
 }
+function sendEmail($data, $template)
+{
+    $asunto = $data['asunto'];
+    $emailDestino = $data['email'];
+    $empresa = NOMBRE_REMITENTE;
+    $remitente = EMAIL_REMITENTE;
+    //ENVIO DE CORREO
+    $de = "MIME-Version: 1.0\r\n";
+    $de .= "Content-type: text/html; charset=UTF-8\r\n";
+    $de .= "From: {$empresa} <{$remitente}>\r\n";
+    ob_start();
+    require_once("Views/Template/Email/" . $template . ".php");
+    $mensaje = ob_get_clean();
+    $send = mail($emailDestino, $asunto, $mensaje, $de);
+    return $send;
+}
+function getPermisos(int $idModulo)
+{
+    require_once("Models/PermisosModel.php");
+    $objPermisos = new PermisosModel();
+    $id_rol = $_SESSION['userData']['id_role'];
+    $arrPermisos = $objPermisos->permisosModulos($id_rol);
+    $permisos = "";
+    $permisosModules = "";
+
+    if (count($arrPermisos) > 0) {
+        $permisos = $arrPermisos;
+        $permisosModules = isset($arrPermisos[$idModulo]) ? $arrPermisos[$idModulo] : "";
+    }
+    $_SESSION['permisos'] = $permisos;
+    $_SESSION['permisosModules'] = $permisosModules;
+}
 //Elimina exceso de espacios entre palabras
 function strClean($strCadena)
 {
@@ -90,5 +122,3 @@ function formatMoney($cantidad)
     $cantidad = number_format($cantidad, 2, SPD, SPM);
     return $cantidad;
 }
-
-?>
