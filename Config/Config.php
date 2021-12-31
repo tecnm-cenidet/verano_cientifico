@@ -18,4 +18,7 @@ const SPM = ',';
 //Simbolo de moneda
 const SMONEY = '$';
 
-?>
+const NOMBRE_REMITENTE = "Verano-Cientifico";
+const EMAIL_REMITENTE = "vitervo@cenidet.edu.mx";
+const NOMBRE_EMPESA = "TecNM/Cenidet";
+const WEB_EMPRESA = "cenidet.tecnm.mx";
