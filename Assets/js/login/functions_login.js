@@ -203,4 +203,52 @@ document.addEventListener('DOMContentLoaded',function()
         }
     }
 
+    if(document.querySelector("#formLoginProfesor"))
+    {
+        let formLoginProfesor=document.querySelector("#formLoginProfesor");
+        formLoginProfesor.onsubmit=function(e)
+        {
+            e.preventDefault();
+            let strId=document.querySelector('#txtIdTec').value;
+            let strPassword=document.querySelector('#txtPassword').value;
+            
+            var request=(window.XMLHttpRequest)?new XMLHttpRequest():new ActiveXObject('Microsoft.XMLHTTP');
+            var ajaxUrl=base_url+'/Loginprofesor/loginUserProfesor';
+            var formData=new FormData(formLoginProfesor);
+            request.open("POST",ajaxUrl,true);
+            request.send(formData);
+            request.onreadystatechange=function()
+            {
+                if(request.readyState!=4)
+                    return;
+                if(request.status==200)
+                {
+                    var objData=JSON.parse(request.responseText);
+                    if(objData.status)
+                    {
+                        window.location=base_url+'/';
+                    }
+                    else
+                    {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: objData.msg
+                        });
+                        document.querySelector('#txtPassword').value="";
+                    }
+                }
+                else
+                {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Algo salio mal!'
+                    });
+                }
+                return false;
+            }  
+        }
+    }
+
 },false);

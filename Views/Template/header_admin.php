@@ -12,8 +12,6 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?= media() ?>/css/style.css" />
-
-
 	<!-- Bootstrap V5.1 -->
 	<link rel="stylesheet" href="<?= media() ?>/bootstrap/css/bootstrap.min.css" />
 

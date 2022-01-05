@@ -7,13 +7,13 @@ class Home extends Controllers
         session_start();
         session_regenerate_id(true);
         if (empty($_SESSION['login'])) {
-            header('Location:' . base_url() . '/login');
+            header('Location:' . base_url() . '/options');
         }
         getPermisos(1);
     }
     public function Home()
     {
-        $data['page_id'] = 1;
+        $data['page_id'] = 3;
         $data['page_tag'] = 'Verano Cientifico';
         $data['page_tittle'] = 'Página Principal';
         $data['page_name'] = 'home';
