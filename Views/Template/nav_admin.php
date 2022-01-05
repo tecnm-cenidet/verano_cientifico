@@ -27,8 +27,13 @@
 								<li class="nav-item">
 									<a class="nav-link" aria-current="page" href="<?= base_url() ?>/Investigadores">Investigadores</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" aria-current="page" href="<?= base_url() ?>/Evaluador">Evaluador Institucional</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Evaluador Institucional
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="<?= base_url() ?>/Valdocumentos">Validación de Documentos</a></li>
+									</ul>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" aria-current="page" href="<?= base_url() ?>/Acerca">Acerca de</a>
@@ -44,7 +49,7 @@
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<li><a class="dropdown-item" href="<?= base_url() ?>/Perfil">Perfil (<?= $_SESSION['userData']['role_name']; ?>)</a></li>
-										<li><a class="dropdown-item" href="<?= base_url() ?>/logout">Salir</a></li>
+										<li><a class="dropdown-item" href="<?= base_url() ?>/Logout">Cerrar Sesión</a></li>
 
 									</ul>
 								</li>
@@ -80,8 +85,13 @@
 								<li class="nav-item">
 									<a class="nav-link" aria-current="page" href="<?= base_url() ?>/Investigadores">Investigadores</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link disabled" aria-current="page" href="<?= base_url() ?>/Evaluador">Evaluador Institucional</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link disabled dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Evaluador Institucional
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="<?= base_url() ?>/Valdocumentos">Validación de Documentos</a></li>
+									</ul>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" aria-current="page" href="<?= base_url() ?>/Acerca">Acerca de</a>
@@ -97,7 +107,7 @@
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<li><a class="dropdown-item" href="<?= base_url() ?>/Perfil">Perfil (<?= $_SESSION['userData']['role_name']; ?>)</a></li>
-										<li><a class="dropdown-item" href="<?= base_url() ?>/logout">Salir</a></li>
+										<li><a class="dropdown-item" href="<?= base_url() ?>/Logout">Cerrar Sesión</a></li>
 
 									</ul>
 								</li>
@@ -133,8 +143,13 @@
 								<li class="nav-item">
 									<a class="nav-link disabled" aria-current="page" href="<?= base_url() ?>/Investigadores">Investigadores</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" aria-current="page" href="<?= base_url() ?>/Evaluador">Evaluador Institucional</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Evaluador Institucional
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="<?= base_url() ?>/Valdocumentos">Validación de Documentos</a></li>
+									</ul>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" aria-current="page" href="<?= base_url() ?>/Acerca">Acerca de</a>
@@ -150,7 +165,7 @@
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<li><a class="dropdown-item" href="<?= base_url() ?>/Perfil">Perfil (<?= $_SESSION['userData']['role_name']; ?>)</a></li>
-										<li><a class="dropdown-item" href="<?= base_url() ?>/logout">Salir</a></li>
+										<li><a class="dropdown-item" href="<?= base_url() ?>/Logout">Cerrar Sesión</a></li>
 
 									</ul>
 								</li>
@@ -186,8 +201,13 @@
 								<li class="nav-item">
 									<a class="nav-link disabled" aria-current="page" href="<?= base_url() ?>/Investigadores">Investigadores</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link disabled" aria-current="page" href="<?= base_url() ?>/Evaluador">Evaluador Institucional</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link disabled dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Evaluador Institucional
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="<?= base_url() ?>/Valdocumentos">Validación de Documentos</a></li>
+									</ul>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" aria-current="page" href="<?= base_url() ?>/Acerca">Acerca de</a>
@@ -203,7 +223,7 @@
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 										<li><a class="dropdown-item" href="<?= base_url() ?>/Perfil">Perfil (<?= $_SESSION['userData']['role_name']; ?>)</a></li>
-										<li><a class="dropdown-item" href="<?= base_url() ?>/logout">Salir</a></li>
+										<li><a class="dropdown-item" href="<?= base_url() ?>/Logout">Cerrar Sesión</a></li>
 
 									</ul>
 								</li>

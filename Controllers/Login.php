@@ -12,7 +12,7 @@ class Login extends Controllers
     }
     public function login()
     {
-        $data['page_id'] = 6;
+        $data['page_id'] = 2;
         $data['page_tag'] = 'Login-Verano Cientifico';
         $data['page_tittle'] = 'Login-Verano Cientifico';
         $data['page_name'] = 'Login';
@@ -76,8 +76,6 @@ class Login extends Controllers
 
                     if ($requestUpdate) {
                         $sendEmail = sendEmail($dataUser, 'Emailcambiopassword');
-
-                        exit;
                         if ($sendEmail) {
                             $arrResponse = array(
                                 'status' => true,

@@ -53,9 +53,9 @@
                                                 <a href="<?= base_url() ?>/resetpassword">Olvidó su password?</a>
                                             </medium>
                                         </div>
-
                                         <div class="text-center mt-3">
                                             <button type="submit" class="btn btn-lg btn-primary">Iniciar Sesión</button>
+                                            <a href="<?= base_url() . "/options" ?>" class="btn btn-lg btn-danger">Regresar</a>
                                         </div>
                                     </form>
                                 </div>
